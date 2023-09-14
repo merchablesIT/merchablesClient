@@ -1,95 +1,74 @@
 import Image from 'next/image'
+import { SyntheticEvent } from 'react'
 import styles from './page.module.css'
 
 export default function Home() {
+
+const handleSubmit = async (e: SyntheticEvent) => {
+  e.preventDefault();
+  const formData = new FormData(e.target as HTMLFormElement);
+  const email = formData.get('email') as string;
+
+  try {
+    const response = await fetch('/api/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    if (response.ok) {
+      console.log('Email submitted successfully')
+    } else {
+      console.error('Email submission failed');
+    }
+
+
+  } catch (error) {
+    console.log('Error', error)
+  }
+
+}
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+          Get Merching&nbsp;
         </p>
         <div>
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+            By
           </a>
         </div>
       </div>
 
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <Image
+              src="/logo.svg"
+              alt="Vercel Logo"
+              className={styles.vercelLogo}
+              width={100}
+              height={104}
+              priority
+            />
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+       <div className={styles.center}>
+        <p>Be the first to know when we launch. Sign up now for updates.</p>
+        <form action="/api/signup" method="post" >
+            <input type="email" name="email" placeholder="Your Email" required style={{
+              marginBottom: "10px",
+              width: "100%", // Adjust the width as needed
+              height: "40px", // Adjust the height as needed
+              padding: "10px", // Add padding for better aesthetics
+              borderRadius: "5px",
+            }}/>
+            <input type="submit" value="Sign Up" className={styles.signupButton}/>
+        </form>
+    </div>
     </main>
   )
 }
