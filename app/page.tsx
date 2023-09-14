@@ -40,7 +40,7 @@ const handleSubmit = async (e: SyntheticEvent) => {
         <div>
           <a
           >
-            By
+          with
           </a>
         </div>
       </div>
