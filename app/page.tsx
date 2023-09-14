@@ -58,7 +58,7 @@ const handleSubmit = async (e: SyntheticEvent) => {
 
        <div className={styles.center}>
         <p>Be the first to know when we launch. Sign up now for updates.</p>
-        <form action="/api/signup" method="post" >
+        <form  method="post" >
             <input type="email" name="email" placeholder="Your Email" required style={{
               marginBottom: "10px",
               width: "100%", // Adjust the width as needed
@@ -66,7 +66,7 @@ const handleSubmit = async (e: SyntheticEvent) => {
               padding: "10px", // Add padding for better aesthetics
               borderRadius: "5px",
             }}/>
-            <input type="submit" value="Sign Up" className={styles.signupButton}/>
+            <button type="submit" value="Sign Up" className={styles.signupButton} />
         </form>
     </div>
     </main>
