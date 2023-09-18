@@ -51,8 +51,8 @@ const handleSubmit = async (e: FormEvent) => {
       <Image
               src="/logo.svg"
               alt="Vercel Logo"
-              className={styles.vercelLogo}
               width={100}
+              className={styles.vercelLogo}
               height={104}
               priority
             />
