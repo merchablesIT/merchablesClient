@@ -161,6 +161,10 @@
     padding: 4rem;
   }
 
+  .main {
+    padding: 0rem;
+  }
+
   .grid {
     grid-template-columns: 1fr;
     margin-bottom: 120px;
