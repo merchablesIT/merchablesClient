@@ -76,11 +76,11 @@ const handleSubmit = async (e: FormEvent) => {
               borderRadius: "5px",
               display: state.submitted ? "none" : "block"
             }}/>
-            <input onClick={handleSubmit} value="Sign Up" className={styles.signupButton}
+            <button onClick={handleSubmit} value="Sign Up" className={styles.signupButton}
               style={{
                 display: state.submitted ? 'none' : 'block', 
               }}
-            />
+            > Sign up</button>
         </form>
          {state.submitted && (
           <div className={styles.alert}>
