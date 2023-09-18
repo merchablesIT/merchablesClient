@@ -1,25 +1,27 @@
 'use client';
 import Image from 'next/image'
-import { SyntheticEvent, useState } from 'react'
+import React, { useReducer, FormEvent } from 'react';
+import { reducer, initialState } from './reducers';
 import styles from './page.module.css'
 
 export default function Home() {
-  const [email, setEmail] = useState(''); 
+const [state, dispatch] = useReducer(reducer, initialState);
 
-const handleSubmit = async (e: any) => {
+
+const handleSubmit = async (e: FormEvent) => {
   e.preventDefault()  ;
-  alert("email");
   try {
     const response = await fetch('/api/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify(state.email),
     });
 
     if (response.ok) {
       console.log('Email submitted successfully')
+      dispatch({ type: 'SUBMIT_SUCCESS' })
     } else {
       console.error('Email submission failed');
     }
@@ -60,17 +62,31 @@ const handleSubmit = async (e: any) => {
         <p>Be the first to know when we launch. Sign up now for updates.</p>
         <form  >
             <input 
-            // value={email} // Bind the input value to the email state
-            onChange={(e) => setEmail(e.target.value)}
-            type="email" name="email" placeholder="Your Email" required style={{
+            onChange={(e) => dispatch({ type: 'SET_EMAIL', payload: e.target.value })}
+            type="email" 
+            name="email" 
+            placeholder="Your Email" 
+            required 
+            value={state.email}
+            style={{
               marginBottom: "10px",
               width: "100%", 
               height: "40px", 
               padding: "10px", 
               borderRadius: "5px",
+              display: state.submitted ? "none" : "block"
             }}/>
-            <input onClick={handleSubmit} value="Sign Up" className={styles.signupButton} />
+            <input onClick={handleSubmit} value="Sign Up" className={styles.signupButton}
+              style={{
+                display: state.submitted ? 'none' : 'block', 
+              }}
+            />
         </form>
+         {state.submitted && (
+          <div className={styles.alert}>
+            Email submitted successfully! Thank you for signing up.
+          </div>
+        )}
     </div>
     </main>
   )
