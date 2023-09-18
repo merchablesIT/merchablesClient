@@ -59,7 +59,7 @@ const handleSubmit = async (e: FormEvent) => {
       </div>
 
        <div className={styles.center}>
-        <p>Be the first to know when we launch. Sign up now for updates.</p>
+        <p>Be the first to know when we launch. Sign up to become a MERCHER.</p>
         <form  >
             <input 
             onChange={(e) => dispatch({ type: 'SET_EMAIL', payload: e.target.value })}
