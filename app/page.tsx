@@ -1,16 +1,27 @@
 'use client';
 import Image from 'next/image'
-import React, { useReducer, FormEvent } from 'react';
+import React, { useReducer, FormEvent, useState } from 'react';
 import { reducer, initialState } from './reducers';
 import styles from './page.module.css'
 
 export default function Home() {
 const [state, dispatch] = useReducer(reducer, initialState);
+const [loading, setLoading] = useState(false);
+const isEmailValid = (email: string) => {
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+}
 
 
 const handleSubmit = async (e: FormEvent) => {
-  e.preventDefault()  ;
+  e.preventDefault();
+  if (!isEmailValid(state.email)) {
+    // Email is not valid, do not proceed
+    console.error('Invalid email');
+    return;
+  }
   try {
+    setLoading(true);
     const response = await fetch('/api/signup', {
       method: 'POST',
       headers: {
@@ -29,7 +40,10 @@ const handleSubmit = async (e: FormEvent) => {
 
   } catch (error) {
     console.log('Error', error)
+  }finally {
+    setLoading(false);
   }
+
 
 }
 
@@ -78,11 +92,13 @@ const handleSubmit = async (e: FormEvent) => {
             }}/>
             <button onClick={handleSubmit} value="Sign Up" className={styles.signupButton}
               style={{
-                display: state.submitted ? 'none' : 'block', 
+                // display: state.submitted ? 'none' : 'block', 
+                display: state.submitted || loading || !isEmailValid(state.email) ? 'none' : 'block',
               }}
             > Sign up</button>
+             {loading && <div>Loading...</div>}
         </form>
-         {state.submitted && (
+        {state.submitted && !loading && (
           <div className={styles.alert}>
             Email submitted successfully! Thank you for signing up.
           </div>
