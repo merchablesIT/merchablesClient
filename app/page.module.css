@@ -89,9 +89,9 @@
 .center {
   /* display: flex; */
   /* justify-content: center; */
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  /* align-items: center; */
+  /* position: relative; */
+  /* padding: 4rem 0; */
 }
 
 .center p {
@@ -120,6 +120,11 @@
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
+  z-index: -2;
+}
+
+.center button {
+  z-index: 1;
 }
 
 .logo {

@@ -1,14 +1,14 @@
+'use client';
 import Image from 'next/image'
-import { SyntheticEvent } from 'react'
+import { SyntheticEvent, useState } from 'react'
 import styles from './page.module.css'
 
 export default function Home() {
+  const [email, setEmail] = useState(''); 
 
-const handleSubmit = async (e: SyntheticEvent) => {
-  e.preventDefault();
-  const formData = new FormData(e.target as HTMLFormElement);
-  const email = formData.get('email') as string;
-
+const handleSubmit = async (e: any) => {
+  e.preventDefault()  ;
+  alert("email");
   try {
     const response = await fetch('/api/signup', {
       method: 'POST',
@@ -58,15 +58,18 @@ const handleSubmit = async (e: SyntheticEvent) => {
 
        <div className={styles.center}>
         <p>Be the first to know when we launch. Sign up now for updates.</p>
-        <form  method="post" >
-            <input type="email" name="email" placeholder="Your Email" required style={{
+        <form  >
+            <input 
+            // value={email} // Bind the input value to the email state
+            onChange={(e) => setEmail(e.target.value)}
+            type="email" name="email" placeholder="Your Email" required style={{
               marginBottom: "10px",
-              width: "100%", // Adjust the width as needed
-              height: "40px", // Adjust the height as needed
-              padding: "10px", // Add padding for better aesthetics
+              width: "100%", 
+              height: "40px", 
+              padding: "10px", 
               borderRadius: "5px",
             }}/>
-            <button type="submit" value="Sign Up" className={styles.signupButton} />
+            <input onClick={handleSubmit} value="Sign Up" className={styles.signupButton} />
         </form>
     </div>
     </main>
