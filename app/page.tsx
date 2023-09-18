@@ -40,7 +40,7 @@ const handleSubmit = async (e: any) => {
         <div>
           <a
           >
-          with
+          with <span className='visibleOnMobile'>Merchables</span>
           </a>
         </div>
       </div>

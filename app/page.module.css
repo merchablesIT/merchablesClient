@@ -26,6 +26,10 @@
   gap: 0.5rem;
 }
 
+.description a span {
+  display: none;
+}
+
 .description p {
   position: relative;
   margin: 0;
@@ -130,6 +134,9 @@
 .logo {
   position: relative;
 }
+
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -184,6 +191,10 @@
 
   .description a {
     padding: 1rem;
+  }
+
+  .description a span {
+    display:contents;
   }
 
   .description p,
