@@ -6,11 +6,11 @@ import { MongoClient, ServerApiVersion } from "mongodb";
  * @returns {Promise<Object>} A promise that resolves to an object containing the characters data.
  */
 
-export const config = {
-  api: {
-    bodyParser: true,
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: true,
+//   },
+// };
 
 
 const uri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.5p9q1bk.mongodb.net/?retryWrites=true&w=majority`;
