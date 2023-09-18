@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "engines": {
-    "node": ">=16.20.1"
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "@types/node": "20.6.0",
