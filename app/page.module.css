@@ -8,6 +8,139 @@
   gap: 1rem;
 }
 
+.backgroundContainer {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: #000;  */
+  z-index: -1;
+  overflow: hidden;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translate(0, 0);
+    color: pink;
+    font-size: 24px;
+  }
+  50% {
+    transform: translate(90vw, 90vh);
+    color: blue;
+    font-size: 24px;
+  }
+  100% {
+    transform: translate(0, 0);
+    color: white;
+    font-size: 24px;
+  }
+}
+
+.textAnimation {
+  animation: moveText 10s linear infinite;
+  position: absolute;
+}
+
+@keyframes moveText1 {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    color: pink;
+    font-size: 24px;
+  }
+  50% {
+    transform: translateY(0) translateX(50vw);
+    color: blue;
+    font-size: 24px;
+  }
+  100% {
+    transform: translateY(100vh) translateX(0);
+    color: green;
+    font-size: 24px;
+  }
+}
+
+.textAnimation1 {
+  animation: moveText1 10s linear infinite;
+  position: absolute;
+}
+
+@keyframes moveText2 {
+  0% {
+    transform: translateX(100vh) translateY(0);
+    color: pink;
+    font-size: 24px;
+  }
+  50% {
+    transform: translateX(0) translateY(50vw);
+    color: blue;
+    font-size: 24px;
+  }
+  100% {
+    transform: translateX(100vh) translateY(0);
+    color: white;
+    font-size: 24px;
+  }
+}
+
+.textAnimation2 {
+  animation: moveText2 10s linear infinite;
+  position: absolute;
+}
+
+@keyframes moveText3 {
+  0% {
+    transform: translateX(0) translateY(0);
+    color: pink;
+    font-size: 24px;
+  }
+  25% {
+    transform: translateX(50vw) translateY(0);
+    color: pink;
+    font-size: 24px;
+  }
+  50% {
+    transform: translateX(0) translateY(0);
+    color: blue;
+    font-size: 24px;
+  }
+  75% {
+    transform: translateX(-50vw) translateY(0);
+    color: pink;
+    font-size: 24px;
+  }
+  100% {
+    transform: translateX(0) translateY(50vh);
+    color: white;
+    font-size: 24px;
+  }
+
+}
+
+.textAnimation3 {
+  animation: moveText3 10s linear infinite;
+  position: absolute;
+}
+
+
+
+.largeText {
+  font-size: 2rem; /* Adjust the font size as needed */
+  margin: 0.5rem;
+}
+
+/* Define different styles for each text color */
+.largeText:nth-child(odd) {
+  color: #ff5733; /* Set your desired text color */
+}
+
+.largeText:nth-child(even) {
+  color: #33ff57; /* Set another desired text color */
+}
+
 .description {
   display: inherit;
   justify-content:flex-start;

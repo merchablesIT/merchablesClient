@@ -49,6 +49,32 @@ const handleSubmit = async (e: FormEvent) => {
 
   return (
     <main className={styles.main}>
+           <div className={styles.backgroundContainer}>
+        <p className={styles.textAnimation}>
+       BUY AND SELL AUTHENTIC SNEAKERS
+          <span role="img" aria-label="Sneaker Emoji">
+            {" "} 👟
+          </span>
+        </p>
+        <p className={styles.textAnimation1}>
+ PRINT NFTs
+          <span role="img" aria-label="Sneaker Emoji">
+             {" "}🖼️
+          </span>
+        </p>
+        <p className={styles.textAnimation2}>
+ EMPOWERING CREATORS
+  <span role="img" aria-label="Creator Emoji">
+    {" "} 👩‍🎨
+  </span>
+</p>
+<p className={styles.textAnimation3}>
+CREATE MERCHANDISE
+  <span role="img" aria-label="Creator Emoji">
+    {" "} 🎨 
+  </span>
+</p>
+      </div>
       <div className={styles.description}>
         <p>
           Get Merching&nbsp;
@@ -62,7 +88,6 @@ const handleSubmit = async (e: FormEvent) => {
       </div>
 
       <div className={styles.center}>
-
       <Image
               src="/logo.svg"
               alt="Vercel Logo"
@@ -71,7 +96,6 @@ const handleSubmit = async (e: FormEvent) => {
               height={104}
               priority
             />
-
     <div className={styles.formWithLabel}>
         <p>Be the first to know when we launch. Sign up to become a Mercher.</p>
         <form  >
@@ -104,7 +128,6 @@ const handleSubmit = async (e: FormEvent) => {
           </div>
         )}
         </div>
-
       </div>
     </main>
   )
