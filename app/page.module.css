@@ -79,23 +79,21 @@
 
 .signupButton {
   background-color: var(--primary-color); 
-  color: #fff; 
+  color: black; 
   border: none; 
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer; 
 }
 
-.signupbutton {
-  background-color: #0056b3;
+.formWithLabel {
+  margin-top: 0.5rem;
 }
 
+
 .center {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* position: relative; */
-  /* padding: 4rem 0; */
+  display: flex;
+  gap: 1.5rem;
 }
 
 .center p {
@@ -129,12 +127,14 @@
 
 .center button {
   z-index: 1;
+  width: 100%;
 }
+
+
 
 .logo {
   position: relative;
 }
-
 
 
 /* Enable hover only on non-touch devices */
@@ -154,10 +154,6 @@
     transform: none;
   }
 }
-
-/* // "engines": {
-  //   "node": ">=16.20.1"
-  // }, */
 
 /* Mobile */
 @media (max-width: 700px) {
@@ -185,7 +181,9 @@
   }
 
   .center {
-    padding: 8rem 0 6rem;
+    /* padding: 8rem 0 6rem; */
+    display: block;
+      flex-direction: column; 
   }
 
   .center::before {
@@ -193,6 +191,11 @@
     height: 300px;
   }
 
+  .signupButton {
+    width: 100%;
+  }
+
+ 
   .description {
     font-size: 0.8rem;
   }
@@ -242,6 +245,11 @@
     );
     z-index: 1;
   }
+
+  .vercelLogo {
+    margin-left: calc(100% - 15rem);
+  }
+
 }
 
 /* Tablet and Smaller Desktop */
@@ -253,7 +261,8 @@
 
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
-    filter: invert(1);
+    /* filter: invert(1); */
+    /* margin-left: calc(100% - 15rem); */
   }
 
   .logo {

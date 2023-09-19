@@ -62,6 +62,7 @@ const handleSubmit = async (e: FormEvent) => {
       </div>
 
       <div className={styles.center}>
+
       <Image
               src="/logo.svg"
               alt="Vercel Logo"
@@ -70,9 +71,8 @@ const handleSubmit = async (e: FormEvent) => {
               height={104}
               priority
             />
-      </div>
 
-       <div className={styles.center}>
+    <div className={styles.formWithLabel}>
         <p>Be the first to know when we launch. Sign up to become a Mercher.</p>
         <form  >
             <input 
@@ -103,7 +103,9 @@ const handleSubmit = async (e: FormEvent) => {
             Email submitted successfully! Thank you for signing up.
           </div>
         )}
-    </div>
+        </div>
+
+      </div>
     </main>
   )
 }
