@@ -89,7 +89,7 @@ CREATE MERCHANDISE
 
       <div className={styles.center}>
       <Image
-              src="/logo.svg"
+              src="/logoBG.svg"
               alt="Vercel Logo"
               width={100}
               className={styles.vercelLogo}
