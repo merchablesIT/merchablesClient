@@ -13,6 +13,7 @@ const texts = [
   'Buy Sneakers With',
   'Experience Art on',
   'Support Creatives on',
+  'Legacy Trends Innovaton',
 
 ];
 const isEmailValid = (email: string) => {
@@ -74,7 +75,7 @@ const handleSubmit = async (e: FormEvent) => {
       <div className={styles.center}>
       <Image
               src="/logoNoBg.png"
-              alt="Vercel Logo"
+              alt="Merchables Logo"
               width={100}
               className={styles.vercelLogo}
               height={104}
