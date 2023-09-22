@@ -12,7 +12,6 @@ const isEmailValid = (email: string) => {
     return emailPattern.test(email);
 }
 
-
 const handleSubmit = async (e: FormEvent) => {
   e.preventDefault();
   if (!isEmailValid(state.email)) {
@@ -44,37 +43,11 @@ const handleSubmit = async (e: FormEvent) => {
     setLoading(false);
   }
 
-
 }
 
   return (
-    <main className={styles.main}>
-           <div className={styles.backgroundContainer}>
-        <p className={styles.textAnimation}>
-       BUY AND SELL AUTHENTIC SNEAKERS
-          <span role="img" aria-label="Sneaker Emoji">
-            {" "} 👟
-          </span>
-        </p>
-        <p className={styles.textAnimation1}>
- PRINT NFTs
-          <span role="img" aria-label="Sneaker Emoji">
-             {" "}🖼️
-          </span>
-        </p>
-        <p className={styles.textAnimation2}>
- EMPOWERING CREATORS
-  <span role="img" aria-label="Creator Emoji">
-    {" "} 👩‍🎨
-  </span>
-</p>
-<p className={styles.textAnimation3}>
-CREATE MERCHANDISE
-  <span role="img" aria-label="Creator Emoji">
-    {" "} 🎨 
-  </span>
-</p>
-      </div>
+    <>
+<main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get Merching&nbsp;
@@ -129,6 +102,7 @@ CREATE MERCHANDISE
         )}
         </div>
       </div>
-    </main>
+    </main> 
+    </>
   )
 }

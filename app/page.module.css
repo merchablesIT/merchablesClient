@@ -6,6 +6,7 @@
   padding: 6rem;
   min-height: 100vh;
   gap: 1rem;
+
 }
 
 .backgroundContainer {
@@ -21,6 +22,17 @@
   z-index: -1;
   overflow: hidden;
 }
+
+
+
+/* Style individual background images */
+.background-image {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 10px; /* Add margin between images */
+}
+
 
 @keyframes moveText {
   0% {
