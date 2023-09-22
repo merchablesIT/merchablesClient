@@ -7,10 +7,27 @@ import styles from './page.module.css'
 export default function Home() {
 const [state, dispatch] = useReducer(reducer, initialState);
 const [loading, setLoading] = useState(false);
+const [textIndex, setTextIndex] = useState(0);
+const texts = [
+  'Get Merching With',
+  'Buy Sneakers With',
+  'Experience Art on',
+  'Support Creatives on',
+
+];
 const isEmailValid = (email: string) => {
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailPattern.test(email);
 }
+
+React.useEffect(() => {
+  const interval = setInterval(() => {
+    setTextIndex((prevIndex) => (prevIndex === texts.length - 1 ? 0 : prevIndex + 1));
+  }, 3000); // Change text every 5 seconds
+
+  return () => clearInterval(interval);
+}, []);
+
 
 const handleSubmit = async (e: FormEvent) => {
   e.preventDefault();
@@ -49,20 +66,14 @@ const handleSubmit = async (e: FormEvent) => {
     <>
 <main className={styles.main}>
       <div className={styles.description}>
-        <p>
-          Get Merching&nbsp;
-        </p>
-        <div>
-          <a
-          >
-          with <span className='visibleOnMobile'>Merchables</span>
-          </a>
-        </div>
+          <p>{texts[textIndex]}
+       <span>{" "} Merchables</span>
+          </p>
       </div>
 
       <div className={styles.center}>
       <Image
-              src="/logoBG.svg"
+              src="/logoNoBg.png"
               alt="Vercel Logo"
               width={100}
               className={styles.vercelLogo}
@@ -70,6 +81,7 @@ const handleSubmit = async (e: FormEvent) => {
               priority
             />
     <div className={styles.formWithLabel}>
+      <div> 
         <p>Be the first to know when we launch. Sign up to become a Mercher.</p>
         <form  >
             <input 
@@ -100,6 +112,7 @@ const handleSubmit = async (e: FormEvent) => {
             Email submitted successfully! Thank you for signing up.
           </div>
         )}
+        </div>
         </div>
       </div>
     </main> 

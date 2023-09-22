@@ -5,152 +5,8 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-  gap: 1rem;
+  /* gap: 1rem; */
 
-}
-
-.backgroundContainer {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-color: #000;  */
-  z-index: -1;
-  overflow: hidden;
-}
-
-
-
-/* Style individual background images */
-.background-image {
-  width: auto;
-  height: 100%;
-  object-fit: cover;
-  margin: 0 10px; /* Add margin between images */
-}
-
-
-@keyframes moveText {
-  0% {
-    transform: translate(0, 0);
-    color: pink;
-    font-size: 24px;
-  }
-  50% {
-    transform: translate(90vw, 90vh);
-    color: green;
-    font-size: 24px;
-  }
-  100% {
-    transform: translate(0, 0);
-    color: white;
-    font-size: 24px;
-  }
-}
-
-.textAnimation {
-  animation: moveText 10s linear infinite;
-  position: absolute;
-}
-
-@keyframes moveText1 {
-  0% {
-    transform: translateY(100vh) translateX(0);
-    color: pink;
-    font-size: 24px;
-  }
-  50% {
-    transform: translateY(0) translateX(50vw);
-    color: green;
-    font-size: 24px;
-  }
-  100% {
-    transform: translateY(100vh) translateX(0);
-    color: green;
-    font-size: 24px;
-  }
-}
-
-.textAnimation1 {
-  animation: moveText1 10s linear infinite;
-  position: absolute;
-}
-
-@keyframes moveText2 {
-  0% {
-    transform: translateX(100vh) translateY(0);
-    color: pink;
-    font-size: 24px;
-  }
-  50% {
-    transform: translateX(0) translateY(50vw);
-    color: green;
-    font-size: 24px;
-  }
-  100% {
-    transform: translateX(100vh) translateY(0);
-    color: white;
-    font-size: 24px;
-  }
-}
-
-.textAnimation2 {
-  animation: moveText2 10s linear infinite;
-  position: absolute;
-}
-
-@keyframes moveText3 {
-  0% {
-    transform: translateX(0) translateY(0);
-    color: pink;
-    font-size: 24px;
-  }
-  25% {
-    transform: translateX(50vw) translateY(0);
-    color: pink;
-    font-size: 24px;
-  }
-  50% {
-    transform: translateX(0) translateY(0);
-    color: green;
-    font-size: 24px;
-  }
-  75% {
-    transform: translateX(-50vw) translateY(0);
-    color: pink;
-    font-size: 24px;
-  }
-  100% {
-    transform: translateX(0) translateY(50vh);
-    color: white;
-    font-size: 24px;
-  }
-
-}
-
-.textAnimation3 {
-  animation: moveText3 10s linear infinite;
-  position: absolute;
-}
-
-
-
-.largeText {
-  font-size: 2rem; /* Adjust the font size as needed */
-  margin: 0.5rem;
-}
-
-/* Define different styles for each text color */
-.largeText:nth-child(odd) {
-  color: #ff5733; /* Set your desired text color */
-}
-
-.largeText:nth-child(even) {
-  color: #33ff57; /* Set another desired text color */
 }
 
 .description {
@@ -162,6 +18,7 @@
   gap: 0.5rem;
   z-index: 2;
   font-family: var(--font-mono);
+  margin: 0;
 }
 
 .description a {
@@ -171,7 +28,7 @@
   gap: 0.5rem;
 }
 
-.description a span {
+.description span {
   display: none;
 }
 
@@ -179,9 +36,7 @@
   position: relative;
   margin: 0;
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+  
 }
 
 .code {
@@ -238,11 +93,16 @@
 
 .center {
   display: flex;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
+margin-left: -1.5rem;
 }
 
 .center p {
   margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+
+  /* color: black; */
 }
 
 .center::before {
@@ -308,6 +168,7 @@
 
   .main {
     padding: 0rem;
+    margin-left: calc(100vw - 19rem);
   }
 
   .grid {
@@ -343,14 +204,16 @@
  
   .description {
     font-size: 0.8rem;
+    background-color: black;
+    color: white;
   }
 
   .description a {
     padding: 1rem;
   }
 
-  .description a span {
-    display:contents;
+  .description  span {
+    display: contents;
   }
 
   .description p,
