@@ -92,7 +92,7 @@ const handleSubmit = async (e: FormEvent) => {
             placeholder="Your Email" 
             required 
             value={state.email}
-            className={styles.placeHolder}
+            className={styles.input}
             style={{
               marginBottom: "10px",
               width: "100%", 
@@ -109,7 +109,7 @@ const handleSubmit = async (e: FormEvent) => {
                 // display: state.submitted ? 'none' : 'block', 
                 display: state.submitted || loading || !isEmailValid(state.email) ? 'none' : 'block',
               }}
-            > Sign up</button>
+            > Sign Up</button>
              {loading && <div>Loading...</div>}
         </form>
         {state.submitted && !loading && (

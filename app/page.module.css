@@ -13,7 +13,7 @@
   display: inherit;
   justify-content:flex-start;
   align-items: inherit;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   max-width: var(--max-width);
   gap: 0.5rem;
   z-index: 2;
@@ -100,7 +100,7 @@ margin-left: -1.5rem;
 .center p {
   margin-bottom: 10px;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 
   /* color: black; */
 }
@@ -137,9 +137,15 @@ margin-left: -1.5rem;
   border: 1px solid var(--primary-color)
 }
 
-.placeHolder::placeholder {
+.center button:hover{
+  background-color: var(--primary-color);
+  color: black;
+}
+
+
+
+.input::placeholder {
   color: #fff;
-  /* background-color: var(--primary-color); */
 }
 
 
@@ -243,6 +249,7 @@ margin-left: -1.5rem;
     padding: 2rem 1rem 1.4rem;
     border-radius: 0;
     border: none;
+    font-size: 0.6rem;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
     background: linear-gradient(
       to bottom,
