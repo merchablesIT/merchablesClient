@@ -6,8 +6,8 @@ import { MongoClient, ServerApiVersion } from "mongodb";
  * @returns {Promise<Object>} A promise that resolves to an object containing the characters data.
  */
 
-const uri = `mongodb+srv://merchables:suichi@cluster0.5p9q1bk.mongodb.net/?retryWrites=true&w=majority`;
-// const uri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.5p9q1bk.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = `mongodb+srv://merchables:suichi@cluster0.5p9q1bk.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.5p9q1bk.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,
