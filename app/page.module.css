@@ -193,8 +193,8 @@ margin-left: -1.5rem;
   }
 
   .center::before {
-    transform: none;
     height: 300px;
+    transform: none;
   }
 
   .signupButton {
