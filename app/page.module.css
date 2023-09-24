@@ -77,8 +77,8 @@
   max-width: 30ch;
 }
 
-.signupButton {
-  background-color: var(--primary-color); 
+.signupButton { 
+  /* background-color: var(--primary-color);  */
   color: white; 
   border: none; 
   padding: 10px 20px;
@@ -133,6 +133,13 @@ margin-left: -1.5rem;
 .center button {
   z-index: 1;
   width: 100%;
+  background-color: black;
+  border: 1px solid var(--primary-color)
+}
+
+.placeHolder::placeholder {
+  color: #fff;
+  /* background-color: var(--primary-color); */
 }
 
 
@@ -197,9 +204,15 @@ margin-left: -1.5rem;
     transform: none;
   }
 
-  .signupButton {
+  /* .signupButton {
     width: 100%;
-  }
+    background-color: var(--primary-color); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; 
+  } */
 
  
   .description {

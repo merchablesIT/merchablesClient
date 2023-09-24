@@ -92,11 +92,15 @@ const handleSubmit = async (e: FormEvent) => {
             placeholder="Your Email" 
             required 
             value={state.email}
+            className={styles.placeHolder}
             style={{
               marginBottom: "10px",
               width: "100%", 
               height: "40px", 
               padding: "10px", 
+              backgroundColor: "black",
+              border: "1px solid #eca8bf",
+              color: "#eca8bf",
               borderRadius: "5px",
               display: state.submitted ? "none" : "block"
             }}/>
