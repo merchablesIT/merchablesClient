@@ -1,0 +1,39 @@
+.imageBackground {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150%;
+  overflow-x: scroll;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr;
+  padding: 16px;
+  max-width: 100%;
+}
+
+/* Styles for individual image items */
+.imageItem {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+/* .img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain;
+  } */
