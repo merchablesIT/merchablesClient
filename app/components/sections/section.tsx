@@ -165,9 +165,9 @@ const Section = () => {
           </div>
         </div>
         <p data-fade>
-          <span>Face ID</span> comes to iPad. It’s engineered for secure
-          unlocking and works seamlessly whether you hold it in portrait or
-          landscape.
+          Elevate your style with <span>Exclusive Collections </span>. At
+          Merchables, art is transformed into fashion, step into the future of
+          fashion.
         </p>
         <img
           data-slide-up
