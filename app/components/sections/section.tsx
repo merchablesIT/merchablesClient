@@ -125,12 +125,8 @@ const Section = () => {
               muted
               autoPlay
               playsInline
-              src="https://www.apple.com/105/media/us/ipad-pro/2018/cE249dd1_58dc_487a_880b_6a1bc197cc43/anim/swipe-up-screen/medium.mp4"
+              src="https://res.cloudinary.com/dlxdkmp1b/video/upload/v1696856208/Untitled_design_ht4b5i.mp4"
             ></video>
-            <img
-              src="https://www.apple.com/v/ipad-pro/s/images/overview/shadow__d20u3oakeiye_large.png"
-              alt=""
-            />
           </div>
           <img
             data-slide-up
@@ -200,22 +196,21 @@ const Section = () => {
       </div>
       <div className="r_bot">
         <p>
-          iPad Pro has <span>two great cameras</span> equipped with Smart HDR. A
-          12MP camera for stunning photos, 4K video, document scanning, and AR
-          experiences. And a TrueDepth camera perfect for Portrait selfies,
-          FaceTime, Animoji, and Memoji.
+          Merchables is a <span>creative hub</span> where you can connect with
+          talented artists from around the world. Blend art with fashion,
+          redefine your look in ways you've never imagined. It's not just about
+          what you wear; it's about expressing yourself, supporting artists, and
+          making a statement.
         </p>
         <img
-          data-slide-up
+          data-slide-down
           data-fade
-          src="https://www.apple.com/v/ipad-pro/s/images/overview/two_cameras__epctxn42bjwy_medium_2x.jpg"
-          alt=""
+          src="https://res.cloudinary.com/dlxdkmp1b/image/upload/v1696857775/21392089_51650749_1000-removebg-preview_y9prtf.png"
+          alt="Golden Goose Stardan multicolour leather sneakers"
         />
+
         <div className="thin">
-          <p>
-            At just over a pound, it’s more portable than ever. Connect on the
-            go with fast Wi-Fi and Gigabit-class LTE
-          </p>
+          <p>Explore a world of couture and art with Merchables today.</p>
         </div>
       </div>
     </div>
