@@ -176,8 +176,9 @@ const Section = () => {
           alt="BEAT Exclusive Off-White Off-White™ c/o Chicago Bulls Red Varsity"
         />
         <p data-fade>
-          Use Face ID to unlock your iPad Pro, <br />
-          log in to apps, and pay with a glance.
+          Connect with <span>talented artists.</span>
+          <br />
+          Express your passion. Generate exclusive art with AI.
         </p>
       </div>
       <div className="r_last">
