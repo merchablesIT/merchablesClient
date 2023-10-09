@@ -104,19 +104,18 @@ const Section = () => {
           alt=""
         />
         <p data-fade>
-          Discover <span>Exclusive Collections</span> <br />
-          Merchables allows you to transform art into fashion. Step into the
-          future of fashion.
+          Discover <span>Exclusive Art Collections</span> <br />
+          Transform art into fashion. Artists earn{" "}
+          <span>on every creation.</span>
         </p>
-        <video
-          data-speed=".5"
-          autoPlay
-          playsInline
-          muted
-          src="https://www.apple.com/105/media/us/ipad-pro/2018/cE249dd1_58dc_487a_880b_6a1bc197cc43/anim/ipad/medium.mp4"
-        ></video>
+        <img
+          data-slide-up
+          data-fade
+          src="https://res.cloudinary.com/dlxdkmp1b/image/upload/v1696846078/21490435_51474695_1000-removebg-preview_udz1oy.png"
+          alt="Represent Cherub motif-embroidered bomber jacket"
+        />
         <p data-speed="-0.01" data-fade>
-          Artists earn <span>on every creation.</span>
+          Step into the future of fashion.
         </p>
       </div>
       <div className="r_vid">
@@ -165,7 +164,7 @@ const Section = () => {
           </div>
         </div>
         <p data-fade>
-          Elevate your style with <span>Exclusive Collections </span>. At
+          Elevate your style with <span>Exclusive Collections.</span> At
           Merchables, art is transformed into fashion, step into the future of
           fashion.
         </p>
@@ -176,15 +175,15 @@ const Section = () => {
           alt="BEAT Exclusive Off-White Off-White™ c/o Chicago Bulls Red Varsity"
         />
         <p data-fade>
-          Connect with <span>talented artists.</span>
+          Express your passion. Connect with <span>talented artists.</span>{" "}
           <br />
-          Express your passion. Generate exclusive art with AI.
+          Redefine your style.
         </p>
       </div>
       <div className="r_last">
         <div className="phone">
           <img
-            src="https://www.apple.com/v/ipad-pro/s/images/overview/usb_c_screen__ems2xs6v94wi_medium_2x.jpg"
+            src="https://res.cloudinary.com/dlxdkmp1b/image/upload/v1696843490/steve-johnson-3Sf_G9m0gcQ-unsplash_ptbohw.jpg"
             alt=""
           />
           <img
@@ -194,9 +193,9 @@ const Section = () => {
         </div>
         <div className="cam"></div>
         <p data-speed=".2" className="grey-txt">
-          <span>USB-C</span> gives you a high-performance connection to
-          accessories like an <br />
-          external display or camera
+          <span>Generate exclusive art</span> with AI. Art seamlessly merges
+          with fashion, <br />
+          taking you on a journey into the future of style.
         </p>
       </div>
       <div className="r_bot">
