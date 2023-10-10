@@ -199,9 +199,9 @@ const Section = () => {
         <p>
           Merchables is a <span>creative hub</span> where you can connect with
           talented artists from around the world. Blend art with fashion,
-          redefine your look in ways you've never imagined. It's not just about
-          what you wear; it's about expressing yourself, supporting artists, and
-          making a statement.
+          redefine your look in ways you've never imagined. It&#39;s not just
+          about what you wear; it&#39;s about expressing yourself, supporting
+          artists, and making a statement.
         </p>
         <Image
           data-slide-down
