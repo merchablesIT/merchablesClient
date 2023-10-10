@@ -15,14 +15,14 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [loading, setLoading] = useState(false);
-  const [textIndex, setTextIndex] = useState(0);
-  const texts = [
-    "Get Merching With",
-    "Buy Sneakers With",
-    "Experience Art on",
-    "Support Creatives on",
-    "Legacy Trends Innovaton",
-  ];
+  // const [textIndex, setTextIndex] = useState(0);
+  // const texts = [
+  //   "Get Merching With",
+  //   "Buy Sneakers With",
+  //   "Experience Art on",
+  //   "Support Creatives on",
+  //   "Legacy Trends Innovaton",
+  // ];
   const isEmailValid = (email: string) => {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailPattern.test(email);
@@ -101,15 +101,15 @@ export default function Home() {
     });
   }, []);
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setTextIndex((prevIndex) =>
-        prevIndex === texts.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); // Change text every 5 seconds
+  // React.useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setTextIndex((prevIndex) =>
+  //       prevIndex === texts.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //   }, 3000); // Change text every 5 seconds
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
