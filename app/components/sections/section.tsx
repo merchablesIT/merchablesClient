@@ -3,6 +3,7 @@ import { IO } from "../animations/observe";
 import ExpressionOfInterestForm from "../forms/ExpressionOfInterestForm";
 import { isEmailValid } from "@/app/utils/isEmailValid";
 import { initialState, reducer } from "@/app/reducers";
+import Image from "next/image";
 
 const Section = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -202,9 +203,11 @@ const Section = () => {
           what you wear; it's about expressing yourself, supporting artists, and
           making a statement.
         </p>
-        <img
+        <Image
           data-slide-down
           data-fade
+          width={1000}
+          height={550}
           src="https://res.cloudinary.com/dlxdkmp1b/image/upload/v1696857775/21392089_51650749_1000-removebg-preview_y9prtf.png"
           alt="Golden Goose Stardan multicolour leather sneakers"
         />
