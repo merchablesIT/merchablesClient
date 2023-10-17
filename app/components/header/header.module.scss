@@ -1,0 +1,60 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.customHeader {
+  background: white;
+  position: relative;
+  padding: 10px;
+  nav {
+    margin: 0 auto;
+    @include flex(space-between, center, none);
+    li {
+      list-style-type: none;
+      color: rgb(0, 0, 0.8);
+      font-size: 12px;
+      opacity: 0.8;
+    }
+  }
+}
+
+.sticky {
+  z-index: 20;
+  transition: 1s ease-out;
+  position: sticky;
+  border-bottom: 1px solid $fadegray;
+  background: rgba(255, 255, 255, 0.984);
+  left: 0;
+  right: 0;
+  top: 0;
+  &_container {
+    @include flex(space-between, center, center);
+    h3 {
+      color: inherit;
+      font-size: 1.3rem;
+      opacity: 0.88;
+      font-weight: 500;
+    }
+    nav {
+      padding: 1rem 0;
+      ul {
+        @include flex(center, center, 2rem);
+        color: rgb(0, 0, 0);
+        opacity: 0.88;
+        li {
+          list-style: none;
+          font-size: 12px;
+        }
+        button {
+          background: $blue;
+          color: white;
+          outline: none;
+          border: none;
+          border-radius: 1rem;
+          font-size: 12px;
+          font-family: inherit;
+          padding: 0.4rem 1rem;
+        }
+      }
+    }
+  }
+}
